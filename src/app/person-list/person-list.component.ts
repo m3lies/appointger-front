@@ -15,8 +15,16 @@ export class PersonListComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getPersons();
+  }
+
+  getPersons (){
     this.personService.findAll().subscribe(data => {
       this.persons = data;
     });
   }
+
+deletePerson(id: number){
+    this.personService.delete(id).subscribe(data=> this.getPersons());
+}
 }
