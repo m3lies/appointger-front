@@ -6,6 +6,7 @@
         <th scope="col">#</th>
         <th scope="col">Name</th>
         <th scope="col">Email</th>
+        <th scope="col"></th>
       </tr>
       </thead>
       <tbody>
@@ -14,7 +15,6 @@
         <td>{{ person.name }}</td>
         <td><a href="mailto:{{ person.email }}">{{ person.email }}</a></td>
         <td><button (click) = "deletePerson(person.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button></td>
-
       </tr>
       </tbody>
     </table>
